@@ -1,0 +1,14 @@
+.container {
+  // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  background: url("../../../../../assets/Leaf.png") no-repeat 30% center;
+  background-size: contain;
+  h3 {
+    @apply text-2xl font-bold my-5 mb-8;
+  }
+  ul {
+    @apply flex gap-5 flex-col;
+    li {
+      @apply font-medium text-xl hover:text-orangeColor duration-150;
+    }
+  }
+}

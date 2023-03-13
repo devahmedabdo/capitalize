@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  ::selection {
+    @apply bg-orangeColor text-white;
+  }
+  html {
+    scroll-behavior: smooth;
+    body {
+      @apply bg-grayBg;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+      hr {
+        @apply border-black;
+      }
+    }
+  }
+}
+@layer utilities {
+  .container {
+    @apply max-w-[1200px] mx-auto px-2;
+  }
+}
+@layer components {
+  .btn {
+    @apply px-4 py-2 font-medium text-lg bg-orangeColor text-white rounded-xl hover:shadow-xl duration-300;
+  }
+}

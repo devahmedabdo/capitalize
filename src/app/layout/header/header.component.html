@@ -1,0 +1,41 @@
+<header class="py-5 relative">
+  <div class="container flex items-center justify-between">
+    <a id="home" href="" class="w-32 logo">
+      <img src="assets/logo.svg" alt="logo">
+    </a>
+    <nav>
+      <ul [ngClass]="{active:activeMenu}" class="flex font-medium text-lg gap-12 ">
+        <li style="--d:1">
+          <a href="#home">
+            Home
+          </a>
+        </li>
+        <li style="--d:2">
+          <a href="#aboutUs">
+            About Us
+          </a>
+        </li>
+        <li style="--d:3">
+          <a href="#services">
+            Our Services
+          </a>
+        </li>
+        <li style="--d:4">
+          <a href="#contact">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a href="" class="btn">
+      Schedule a call
+    </a>
+    <div class="menu-icon w-8 h-8 flex flex-col duration-300 gap-2 items-end" [ngClass]="{active:activeMenu}"
+      (click)="reflectActiveMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+</header>
