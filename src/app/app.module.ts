@@ -17,12 +17,37 @@ import { ContactComponent } from './views/home/components/contact/contact.compon
     LandingComponent,
     AboutComponent,
     ServicesComponent,
-    ContactComponent
+    ContactComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    window.addEventListener('scroll', () => {
+      let divClass = document.querySelectorAll(
+        '.dReveal,.lReveal,.uReveal,.rReveal'
+      );
+      let imgClass = document.querySelectorAll('.imgReveal');
+      [divClass, imgClass].forEach((arr: NodeListOf<Element>) => {
+        let removeClass = (ele: Element, addedClass: string) => {
+          if (ele.getBoundingClientRect().top < 600) {
+            ele.classList.add(addedClass);
+          } else {
+            ele.classList.remove(addedClass);
+          }
+        };
+        if (arr == divClass) {
+          arr.forEach((hiddenEle: Element) => {
+            removeClass(hiddenEle, 'reveal');
+          });
+        } else if (arr == imgClass) {
+          arr.forEach((hiddenEle: Element) => {
+            removeClass(hiddenEle, 'imgUnReveal');
+          });
+        }
+      });
+    });
+  }
+}

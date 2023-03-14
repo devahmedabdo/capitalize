@@ -12,17 +12,17 @@
     z-index: -1;
   }
   &::after {
-    @apply left-0;
+    @apply left-16;
   }
   &::before {
-    @apply right-0;
+    @apply right-16;
     transform: rotateY(180deg);
   }
   .divs {
     gap: 35px 55px;
     > div {
       box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
-      @apply bg-grayBg max-w-lg;
+      @apply bg-grayBg;
     }
   }
 }
