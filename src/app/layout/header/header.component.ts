@@ -11,5 +11,9 @@ export class HeaderComponent implements OnInit {
   reflectActiveMenu() {
     this.activeMenu = !this.activeMenu;
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.addEventListener('scroll', () => {
+      this.activeMenu = false;
+    });
+  }
 }

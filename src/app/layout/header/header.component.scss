@@ -1,10 +1,4 @@
 header {
-  .logo {
-    @media (max-width: 768px) {
-      @apply w-24;
-    }
-  }
-
   nav {
     ul {
       li {
@@ -12,7 +6,7 @@ header {
           @apply duration-300 hover:text-orangeColor;
         }
       }
-      @media (max-width: 768px) {
+      @media (max-width: 832px) {
         @apply bg-grayBg z-50 absolute top-full left-0 w-full items-center justify-center  flex-col h-0 overflow-hidden;
         li {
           @apply translate-y-16 opacity-0 duration-300;
@@ -28,12 +22,12 @@ header {
     }
   }
   .btn {
-    @media (max-width: 768px) {
+    @media (max-width: 832px) {
       @apply ml-auto mr-2;
     }
   }
   .menu-icon {
-    @media (min-width: 768px) {
+    @media (min-width: 833px) {
       @apply hidden;
     }
     span {

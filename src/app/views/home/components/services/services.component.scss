@@ -3,13 +3,10 @@
   &::after,
   &::before {
     content: "";
-    @apply absolute top-0;
+    @apply absolute top-0  w-1/4 h-[360px] -z-10 hidden md:block;
     background: url("../../../../../assets/services/paper.svg") no-repeat center
       center;
     background-size: contain;
-    width: 25%;
-    height: 360px;
-    z-index: -1;
   }
   &::after {
     @apply left-16;
