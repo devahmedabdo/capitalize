@@ -2,7 +2,7 @@
   // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   @media (min-width: 768px) {
     background: url("../../../../../assets/Leaf.png") no-repeat 30% center;
-    background-size: contain;
+    background-size: 340px;
   }
   h3 {
     @apply text-2xl font-bold my-5 mb-8;
